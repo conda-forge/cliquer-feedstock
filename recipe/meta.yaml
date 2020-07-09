@@ -11,7 +11,7 @@ source:
   sha256: 297de57628cf0d89093ef6d3b366a1594b180970e5ffee1395b2b305859584e6
 
 build:
-  number: 1000
+  number: 1001
   skip: true  # [win]
 
 requirements:
@@ -25,7 +25,6 @@ requirements:
 test:
   commands:
     - test -f ${PREFIX}/include/{{ name }}/{{ name }}.h
-    - test -f ${PREFIX}/lib/lib{{ name }}.a
     - test -f ${PREFIX}/lib/lib{{ name }}.dylib  # [osx]
     - test -f ${PREFIX}/lib/lib{{ name }}.so     # [linux]
 
