@@ -1,15 +1,12 @@
 #!/bin/bash
 
-export CPPFLAGS="-I$PREFIX/include $CPPFLAGS"
-export LDFLAGS="-L$PREFIX/lib $LDFLAGS"
-export LD_LIBRARY_PATH="$PREFIX/lib:$LD_LIBRARY_PATH"
-export CFLAGS="-O2 -g $CFLAGS"
+export CFLAGS="-g $CFLAGS"
 
 autoreconf -fi
 automake --add-missing --copy
 chmod +x configure
-./configure --prefix="$PREFIX" --libdir="$PREFIX/lib"
+./configure --prefix="$PREFIX" --libdir="$PREFIX/lib" --disable-static
 
-make
+make -j${CPU_COUNT}
 make check
 make install
