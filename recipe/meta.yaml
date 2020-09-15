@@ -1,4 +1,4 @@
-{% set version = "1.21" %}
+{% set version = "1.22" %}
 {% set name = "cliquer" %}
 
 package:
@@ -8,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/dimpase/autocliquer/archive/v{{ version }}.tar.gz
-  sha256: 297de57628cf0d89093ef6d3b366a1594b180970e5ffee1395b2b305859584e6
+  sha256: 7011ebf3243e81e4eb8259cd75873a2bcdb0faa66fe50d4e7582ce505a66a7ce
 
 build:
-  number: 1001
+  number: 0
   skip: true  # [win]
 
 requirements:
@@ -30,7 +30,7 @@ test:
 
 about:
   home: https://users.aalto.fi/~pat/cliquer.html
-  license: GPLv2+
+  license: GPL-2.0-or-later
   license_file: LICENSE
   summary: Cliquer is a set of C routines for finding cliques in an arbitrary weighted graph
 
