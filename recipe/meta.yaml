@@ -30,7 +30,7 @@ test:
 
 about:
   home: https://users.aalto.fi/~pat/cliquer.html
-  license: GPLv2+
+  license: GPL-2.0-or-later
   license_file: LICENSE
   summary: Cliquer is a set of C routines for finding cliques in an arbitrary weighted graph
 
