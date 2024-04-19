@@ -11,8 +11,12 @@ source:
   sha256: 7011ebf3243e81e4eb8259cd75873a2bcdb0faa66fe50d4e7582ce505a66a7ce
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
+  run_exports:
+    # There has been no release of cliquer since 2010 so we can be very strict
+    # with the pinning here to be on the safe side.
+    - {{ pin_subpackage("cliquer", max_pin="x.x") }}
 
 requirements:
   build:
@@ -37,3 +41,4 @@ about:
 extra:
   recipe-maintainers:
     - isuruf
+    - saraedum
