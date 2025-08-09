@@ -1,4 +1,4 @@
-{% set version = "1.22" %}
+{% set version = "1.23" %}
 {% set name = "cliquer" %}
 
 package:
@@ -8,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/dimpase/autocliquer/archive/v{{ version }}.tar.gz
-  sha256: 7011ebf3243e81e4eb8259cd75873a2bcdb0faa66fe50d4e7582ce505a66a7ce
+  sha256: 089b06d8898a6cf55db3ee100888d1c0099e083db93eba5d1440bfe85ad85b11
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   run_exports:
     # There has been no release of cliquer since 2010 so we can be very strict
@@ -24,6 +24,7 @@ requirements:
     - libtool
     - make
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
 
 test:
